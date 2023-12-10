@@ -15,6 +15,7 @@ export class HomeComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.tl
-      .to('.letter', { color: 'green', duration: 1, stagger: 1 });
+      .to('.letter', { color: 'green', duration: 1, stagger: 1 })
+      .pause();
   }
 }

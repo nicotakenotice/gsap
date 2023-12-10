@@ -6,7 +6,17 @@
     <span class="letter inline-block">P</span>
   </h1>
 
-  <button class="btn" (click)="tl.play()">
-    Animate
-  </button>
+  <div class="flex flex-row gap-4">
+    <button class="btn" (click)="tl.play()">
+      Play
+    </button>
+    
+    <button class="btn" (click)="tl.pause()">
+      Pause
+    </button>
+    
+    <button class="btn" (click)="tl.reverse()">
+      Reverse
+    </button>
+  </div>
 </div>
