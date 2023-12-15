@@ -24,6 +24,7 @@
       "dom"
     ],
     "paths": {
+      "@lib/*": ["./src/app/lib/*"],
       "@routes/*": ["./src/app/routes/*"]
     }
   },
