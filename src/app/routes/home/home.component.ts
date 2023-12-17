@@ -1,6 +1,6 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { TimelineControllerComponent } from '@lib/components';
-import gsap from 'gsap';
+import { AfterViewInit, Component } from '@angular/core'
+import { TimelineControllerComponent } from '@lib/components'
+import gsap from 'gsap'
 
 @Component({
   selector: 'app-home',
@@ -10,16 +10,18 @@ import gsap from 'gsap';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements AfterViewInit {
-  tl = gsap.timeline({ paused: true });
+  tl = gsap.timeline({ paused: true })
 
-  constructor() { }
+  constructor() {}
 
   ngAfterViewInit(): void {
-    this.buildTimeline();
+    this.buildTimeline()
   }
 
   buildTimeline(): void {
     this.tl
-      .to('.letter', { color: 'green', duration: 1, stagger: 1 });
+      .from('.letter', { opacity: 0, duration: 1, stagger: 1 })
+      .from('.letter', { x: 200, duration: 1, stagger: 1 }, '<')
+      .to('.letter', { color: 'green', duration: 1, stagger: 1 }, '<')
   }
 }
