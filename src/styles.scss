@@ -3,7 +3,5 @@
 @tailwind utilities;
 
 .btn {
-  i {
-    @apply text-xl;
-  }
+  i { font-size: 1.25rem; }
 }
